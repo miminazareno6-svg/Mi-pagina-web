@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salud Saludable</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f9f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #95af4c;
+      color: rgba(255, 255, 255, 0.795);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .frase-motivadora {
+      text-align: center;
+      font-style: italic;
+      margin: 20px;
+      font-size: 1.4em;
+      color: #2e7d32;
+    }
+
+    .contenido {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 30px;
+    }
+
+    .seccion {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 300px;
+      margin: 15px;
+      text-align: center;
+    }
+
+    .seccion img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .seccion h2 {
+      color: #388e3c;
+    }
+
+    button {
+      background-color: #66bb6a;
+      color: rgb(255, 255, 255);
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #4caf50;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #e8f5e9;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .calculadora {
+      background-color: #fff;
+      margin: 40px auto;
+      max-width: 500px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .calculadora table {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    .calculadora td {
+      padding: 8px;
+    }
+
+    .calculadora input {
+      width: 100%;
+      padding: 6px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+    }
+
+    #resultado {
+      font-weight: bold;
+      margin-top: 10px;
+      color: #2e7d32;
+    }
+
+    /* ---- NUEVA SECCIÓN DE TABLA DE PESOS ---- */
+    .tabla-peso {
+      background-color: #fff;
+      margin: 40px auto;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .tabla-peso h2 {
+      color: #388e3c;
+      text-align: center;
+    }
+
+    .tabla-peso table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    .tabla-peso th, .tabla-peso td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .tabla-peso th {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .tabla-peso tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    
+    .comentarios {
+      background: #fff;
+      margin: 40px auto;
+      max-width: 500px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .juego {
+      background: #fff;
+      margin: 40px auto;
+      max-width: 500px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+
+
+    .tabla-peso p {
+      text-align: center;
+      color: #555;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Vida Saludable</h1>
+    <p>Tu cuerpo es tu templo, cuídalo</p>
+  </header>
+
+  <p class="frase-motivadora">"El mayor tesoro es una buena salud."</p>
+
+  <div class="contenido">
+    <div class="seccion">
+      <img src="descarga.jpg" alt="Alimentación Saludable">
+      <h2>Alimentación</h2>
+      <p>Una dieta balanceada fortalece el sistema inmunológico y mejora tu energía diaria.</p>
+      <button onclick="mostrarConsejo('alimentacion')">Ver consejo</button>
+    </div>
+  <div class="contenido">
+    <div class="seccion">
+      <img src="descarga23.jpg" alt="consejo profesional">
+      <h2>Consejo</h2>
+      <p>No existe un enfoque único para lograr una vida saludable, ya que cada persona tiene necesidades singulares respecto a su cuerpo y su salud en general. 
+        Para algunas personas un cambio en la alimentación podría implicar incorporar más vegetales en cada comida, 
+        y para otras significará reducir la cantidad de azúcar o comidas procesadas , explica Mariana Villaseñor Saucedo, nutricionista en Ever Health.</p>
+    </div>
+  <div class="seccion">
+      <img src="descarga1.jpg" alt="Ejercicio físico">
+      <h2>Ejercicio</h2>
+      <p>El ejercicio regular mejora tu salud física, mental y emocional.</p>
+      <button onclick="mostrarConsejo('ejercicio')">Ver consejo</button>
+    </div>
+
+    <div class="seccion">
+      <img src="descarga2.jpg" alt="Descanso y mente sana">
+      <h2>Descanso y Mente</h2>
+      <p>Un buen descanso y una mente relajada son clave para una vida larga y feliz.</p>
+      <button onclick="mostrarConsejo('descanso')">Ver consejo</button>
+    </div>
+  </div>
+
+  <div class="calculadora">
+    <h2>Calculadora de Salud</h2>
+    <p>Completa tus datos y descubre si tienes un peso saludable.</p>
+    <table>
+      <tr>
+        <td><label for="nombre">Nombre:</label></td>
+        <td><input type="text" id="nombre" required></td>
+      </tr>
+      <tr>
+        <td><label for="edad">Edad:</label></td>
+        <td><input type="number" id="edad" required></td>
+      </tr>
+      <tr>
+        <td><label for="peso">Peso (kg):</label></td>
+        <td><input type="number" id="peso" step="0.1" required></td>
+      </tr>
+      <tr>
+        <td><label for="altura">Altura (cm):</label></td>
+        <td><input type="number" id="altura" step="0.1" required></td>
+      </tr>
+    </table>
+    <button onclick="calcularIMC()">Calcular IMC</button>
+    <p id="resultado"></p>
+  </div>
+
+  <!-- NUEVA SECCIÓN: TABLA DE PESO IDEAL -->
+  <div class="tabla-peso">
+    <h2>Tabla de peso ideal según altura</h2>
+    <p>Basado en el rango de IMC saludable (18.5 – 24.9)</p>
+    <table id="tablaPesos">
+      <thead>
+        <tr>
+          <th>Altura (cm)</th>
+          <th>Peso mínimo (kg)</th>
+          <th>Peso máximo (kg)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="comentarios-form">
+        <h3> Escribe tu comentario acerca de la página web</h3>
+        <form method="POST">
+            <textarea name="comentario" placeholder="Escribe aquí..." required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <div class="juego">
+    <h2>Juego de Memoria Saludable 🍎</h2>
+    <p>Encuentra las parejas de frutas.</p>
+    <div id="tablero"></div>
+    <button onclick="iniciarJuego()">Iniciar Juego</button>
+    <p id="estadoJuego"></p>
+  </div>
+
+<footer>
+    © 2025 Vida Saludable | Diseñado para inspirarte a vivir mejor
+  </footer>
+
+  <script>
+    function mostrarConsejo(seccion) {
+      let mensaje = "";
+      switch(seccion) {
+        case 'alimentacion':
+          mensaje = "Come más frutas y verduras, y reduce el consumo de azúcares y procesados.";
+          break;
+        case 'ejercicio':
+          mensaje = "Realiza al menos 30 minutos de actividad física al día, como caminar, bailar o nadar.";
+          break;
+        case 'descanso':
+          mensaje = "Duerme entre 7 y 8 horas por noche. Medita o desconéctate del celular antes de dormir.";
+          break;
+      }
+      alert(mensaje);
+    }
+
+    function calcularIMC() {
+      const nombre = document.getElementById("nombre").value;
+      const edad = parseInt(document.getElementById("edad").value);
+      const peso = parseFloat(document.getElementById("peso").value);
+      const alturaCm = parseFloat(document.getElementById("altura").value);
+
+      if (!nombre || isNaN(edad) || isNaN(peso) || isNaN(alturaCm)) {
+        alert("Por favor, completa todos los campos correctamente.");
+        return;
+      }
+
+      const alturaM = alturaCm / 100;
+      const imc = peso / (alturaM * alturaM);
+      let mensaje = "";
+
+      if (imc < 18.5) {
+        mensaje = `${nombre}, tu IMC es ${imc.toFixed(2)}. Estás por debajo del peso ideal.`;
+      } else if (imc >= 18.5 && imc < 25) {
+        mensaje = `${nombre}, tu IMC es ${imc.toFixed(2)}. ¡Tienes un peso saludable!`;
+      } else if (imc >= 25 && imc < 30) {
+        mensaje = `${nombre}, tu IMC es ${imc.toFixed(2)}. Tienes sobrepeso.`;
+      } else {
+        mensaje = `${nombre}, tu IMC es ${imc.toFixed(2)}. Estás en obesidad, cuida tu salud.`;
+      }
+
+      document.getElementById("resultado").innerText = mensaje;
+    }
+
+    // --- CÓDIGO PARA TABLA DE PESO IDEAL ---
+    function pesoMinimo(altura_m) {
+      return 18.5 * Math.pow(altura_m, 2);
+    }
+    function pesoMaximo(altura_m) {
+      return 24.9 * Math.pow(altura_m, 2);
+    }
+
+    function fmt(n) {
+      const v = Math.round(n * 10) / 10;
+      return (v % 1 === 0) ? v.toFixed(0) : v.toFixed(1);
+    }
+
+    const tbody = document.querySelector("#tablaPesos tbody");
+    for (let cm = 140; cm <= 200; cm += 5) {
+      const m = cm / 100;
+      const min = pesoMinimo(m);
+      const max = pesoMaximo(m);
+      const fila = document.createElement("tr");
+      fila.innerHTML = `
+        <td>${cm}</td>
+        <td>${fmt(min)}</td>
+        <td>${fmt(max)}</td>
+      `;
+      tbody.appendChild(fila);
+    }
+  </script>
+
+</body>
+</html>
